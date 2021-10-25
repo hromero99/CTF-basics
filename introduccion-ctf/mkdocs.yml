@@ -3,3 +3,9 @@ site_name: Introducción a los retos capture the flag (CTF)
 theme:
   name: material
 locale: es
+
+nav:
+  - "Inicio": index.md
+  - "Redes":
+      - Inicio: redes/index.md
+      - Herramientas: redes/tools.md
