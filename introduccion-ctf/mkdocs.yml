@@ -9,3 +9,6 @@ nav:
   - "Redes":
       - Inicio: redes/index.md
       - Herramientas: redes/tools.md
+  - Web:
+      - Inicio: web/index.md
+      - Herramientas: web/tools.md
