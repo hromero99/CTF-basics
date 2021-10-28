@@ -37,4 +37,22 @@ java -jar burp.jar
 Como resultado obtendremos la posibilidad de crear un proyecto (donde se almacenará toda la información del análisis realizado a una aplicación web). En el caso de realizar pequeñas pruebas, podemos seleccionar la opción de _temporal project_
 
 #### Configurar la funcionalidad proxy
-Una vez abierto podemos configurar la funcionalidad de proxy
+Una vez abierto podemos configurar la funcionalidad de proxy.
+
+En la barra superior tenemos que seleccionar la opción de proxy. Dentro de este menú seleccionamos la opción de _Options_. Obtendremos una ventana igual a la siguiente.
+![](../images/web/burp/proxy-options.PNG)
+
+Dentro de la sección __Proxy Listeners__ tendremos que agregar un nuevo elemento.
+Al agregar un proxy nuevo tendremos que configurarlo. Lo más importante a configurar es el puerto donde va a escuchar el proxy. Este campo se corresponde al _Bind to Port_ del siguiente formulario.
+![](../images/web/burp/proxy-config.PNG)
+Por defecto Burp Suite configura el puerto 8080. En el caso de que tengamos corriendo algún servicio en este puerto,puede causar problema por lo cual podemos escoger cualquiera de los disponibles.
+Una vez seleccionado el puerto se creará el proxy. Solo quedaía configurarlo dentro de nuestro navegador.
+
+### Configuración de proxy en Firefox
+
+Dentro de Firefox tenemos que irnos a las opciones y seleccionar la funcionalidad de proxy. Introducimos los datos como se muestran en pantalla. __Teniendo en cuenta el puerto que hemos configurado anteriormente en Burp Suite__
+![](../images/web/burp/firefox-config.PNG)
+
+Una vez realizado todos los pasos, activamos el modo _intercept_ y obtendremos todos los paquetes que accedamos en el navegador.
+
+![](../images/web/burp/http-capture.PNG)
