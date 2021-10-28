@@ -16,3 +16,7 @@ nav:
       - Inicio: forense/index.md
       - Herramientas: forense/tools.md
       - Retos: forense/retos.md
+  - Stego:
+      - Inicio: stego/index.md
+      - Herramientas: stego/tools.md
+      - Retos: stego/retos.md
