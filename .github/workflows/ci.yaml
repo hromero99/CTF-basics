@@ -6,10 +6,6 @@ You can change the name to your liking.
 on:
   push:
     branches:
-
-At some point, GitHub renamed master to main. If your default branch is named master, you can safely remove main, vice versa.
-
-
       - master
       - main
 jobs:
