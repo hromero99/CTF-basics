@@ -12,3 +12,7 @@ nav:
   - Web:
       - Inicio: web/index.md
       - Herramientas: web/tools.md
+  - Forense:
+      - Inicio: forense/index.md
+      - Herramientas: forense/tools.md
+      - Retos: forense/retos.md

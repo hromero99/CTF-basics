@@ -1,0 +1,5 @@
+Hoy en día, ante cualquier incidente relacionado con la **seguridad informática**, se suelen utilizar en mayor o menor medida técnicas de **análisis forense**, bien para recopilar evidencias de las acciones realizadas por el atacante, para recuperar indicadores de compromiso con el fin de contener y bloquear la amenaza o para ambas cosas.
+
+La **memoria RAM** es uno de los lugares donde podemos encontrar mayor cantidad de artefactos que nos serán de gran utilidad durante la respuesta a un incidente o en el análisis posterior. Podemos encontrar los procesos en ejecución con sus estructuras de datos que nos aportan muchos y valiosos detalles: puertos de comunicaciones abiertos en el sistema, claves de cifrado que se escriben en memoria durante la ejecución de los programas que las utilizan, etc. Ya sean programas legítimos o maliciosos, todos pasan por la memoria durante su ejecución.
+
+Ref: https://www.redseguridad.com/especialidades-tic/activos-de-informacion/la-importancia-de-la-memoria-ram-en-un-analisis-forense_20201030.html
