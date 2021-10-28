@@ -56,3 +56,30 @@ Dentro de Firefox tenemos que irnos a las opciones y seleccionar la funcionalida
 Una vez realizado todos los pasos, activamos el modo _intercept_ y obtendremos todos los paquetes que accedamos en el navegador.
 
 ![](../images/web/burp/http-capture.PNG)
+
+### Configuración de SSL
+
+Cuando tenemos que atacar cualquier página con SSL. El navegador nos dará un error al estar trabajando con el proxy de Burp Suite (ya que este no tiene SSL configurado)
+El error es el siguiente:
+
+![](../images/web/burp/burp-error.PNG)
+
+Para poder solucionar esto, tenemos que generar un certificado CA. Este certificado nos lo genera burp suite en la configuración del proxy.
+![](../images/web/burp/proxy-config.PNG)
+Tenemos que generar el archivo en _Import/Export CA certificate_. 
+Esta opción nos generará un archivo que tendremos que importar posteriormente.
+Dentro de esta opción tenemos que exportar el formato como DER
+![](../images/web/burp/export.PNG)
+
+Para importar el certificado tenemos que irnos a las opciones del navegador e importarlo dentro de las configuraciones de seguridad.
+
+Al importarlo tendremos el siguiente _Warning_
+![](../images/web/burp/import-cer.PNG)
+Esto es causado porque el certificado de CA no es aprobado por una entidad reconocida (este generado por nosotros mismos). como sabemos que ester certificado es nuestro, no corremos ningún riesgo y por lo tanto podemos importarlo.
+Una vez importado lo tendremos en el listado bajo el nombre PortSwingger
+![](../images/web/burp/imported.PNG)
+
+Tenemos que darle a la opción de _edit trust_ y seleccionar ambas opciones.
+![](../images/web/butp/trust.PNG)
+
+Con todo esto configurado podremos acceder a cualquier página con SSL capturando las peticiones sin problema.
