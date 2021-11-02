@@ -3,6 +3,12 @@ site_name: Introducción a los retos capture the flag (CTF)
 theme:
   name: material
   locale: es
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.tracking
+  logo: images/logo.jpg
+  favicon: images/logo.jpg
 
 nav:
   - "Inicio": index.md
