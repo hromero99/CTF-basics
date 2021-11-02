@@ -15,6 +15,7 @@ nav:
   - "Redes":
       - Inicio: redes/index.md
       - Herramientas: redes/tools.md
+      - Retos: redes/retos.md
   - Web:
       - Inicio: web/index.md
       - Herramientas: web/tools.md
