@@ -1,21 +1,4 @@
-# Desafíos de Criptografía
-El objetivo de estos desafíos es, a partir de un mensaje cifrado, encontrar su significado real, lo que llamaremos "flag".
-
-En estos desafios, la obtención de la flag puede ir desde una simple traducción, a tener en cuenta como se almacena la información de usuarios en sistemas UNIX, cracking de contraseñas, entre otros.
-
-En nuestro caso, las flags de los desafios deberán introducirse con el formato:
-```
-flag{FlagEspecifica}
-```
-
-## Utilidades
-Para ayudarnos a desencriptar los códigos, usaremos varias páginas webs. Entre ellas:
-
-- [CyberChef](https://gchq.github.io/CyberChef/)
-
-- [dCode](https://www.dcode.fr/), útil por su herramienta que nos indica una aproximación del sistema de encriptación usado. Muy útil cuando no sabemos como se ha encriptado nuestro mensaje.
-
-- [hashes.com](https://hashes.com/en/decrypt/hash), enfocada sólo a Hashes.
+# Retos de Criptografía
 
 ## Challenge 1
 En primer lugar, descargamos el archivo **challenge1.txt**, cuyo contenido es:

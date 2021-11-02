@@ -1,4 +1,6 @@
-### Reto1: Profile
+# Retos de Forense
+
+## Challenge 1: Profile
 #### Description
 Determina el perfil de S.O. a utilizar con este volcado de memoria.
 
@@ -15,7 +17,7 @@ Cómo vemos en la figura estamos ante un *Windows 7 Service Pack 1 de 64bits*.
 
 Respuesta: ** flag{Win7SP1x64}**
 
-### Reto2: Procesos
+## Challenge 2: Procesos
 #### Description
 ¿Cuántos procesos había en ejecución en el equipo en el momento de la captura?
 
@@ -44,7 +46,7 @@ Y la respuesta es **43 procesos**.
 
 Solution: **flag{43}**
 
-### Reto 3
+## Challenge 3
 #### Description
 ¿Cuántas claves de registro hay en el raíz del hive SYSTEM? (incluyendo las volátiles)
 
@@ -81,7 +83,7 @@ Hay un total de 9 subkeys.
 
 Solution:  **flag{9}**
 
-### Reto 4: Password
+## Challenge 4: Password
 #### Description
 Necesitamos la contraseña de inicio de sesión del usuario Admin. ¿Cuál es?
 

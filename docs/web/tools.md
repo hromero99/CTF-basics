@@ -80,6 +80,6 @@ Una vez importado lo tendremos en el listado bajo el nombre PortSwingger
 ![](../images/web/burp/imported.PNG)
 
 Tenemos que darle a la opción de _edit trust_ y seleccionar ambas opciones.
-![](../images/web/butp/trust.PNG)
+![](../images/web/burp/trust.PNG)
 
 Con todo esto configurado podremos acceder a cualquier página con SSL capturando las peticiones sin problema.

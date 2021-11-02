@@ -2,7 +2,7 @@ site_name: Introducción a los retos capture the flag (CTF)
 
 theme:
   name: material
-locale: es
+  locale: es
 
 nav:
   - "Inicio": index.md
@@ -20,3 +20,7 @@ nav:
       - Inicio: stego/index.md
       - Herramientas: stego/tools.md
       - Retos: stego/retos.md
+  - Crypto:
+      - Inicio: crypto/index.md
+      - Herramientas: crypto/tools.md
+      - Retos: crypto/retos.md

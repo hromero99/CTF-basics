@@ -1,4 +1,6 @@
-### Reto 1
+# Desafíos de Esteganografía
+
+## Challenge 1
 
 En este primer reto nos da una imagen y debemos de conseguir la flag a través de la imagen proporcionada. Lo primero que se debe comprobar siempre es que la imagen **no haya sido modificada** anteriormente. Para ello vamos a acceder a la siguiente página: http://fotoforensics.com/
 
@@ -14,7 +16,7 @@ Observamos que en esa parte ha sido modificada, si abrimos la imagen y hacemos Z
 
 **PASS=TOTORO**, por tanto ya tenemos la flag del desafío: **flag{TOTORO}**
 
-### Reto 2
+### Challenge 2
 
 En el segundo reto también nos proporciona una imgen, por tanto vamos a realizar el mismo proceso que el anterior.
 
@@ -26,7 +28,7 @@ Sin embargo, no ha habido éxito en este caso. El siguiente paso que se suele us
 
 Tendríamos la flag de este segundo reto: **flag{HAHAHA}**
 
-### Reto 3
+### Challenge 3
 
 ## Enunciado
 El siguiente reto nos proporciona [esta](../images/stego/photo.jpg) imagen, pero sabemos que hay algo detrás de ella y necesitamos encontrarlo.
