@@ -1,0 +1,1112 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../images/logo.jpg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Retos - Introducción a los retos capture the flag (CTF)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#desafios-de-esteganografia" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Introducción a los retos capture the flag (CTF)" class="md-header__button md-logo" aria-label="Introducción a los retos capture the flag (CTF)" data-md-component="logo">
+      
+  <img src="../../images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a los retos capture the flag (CTF)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Retos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../redes/" class="md-tabs__link">
+        Redes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../web/" class="md-tabs__link">
+        Web
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../forense/" class="md-tabs__link">
+        Forense
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Stego
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../crypto/" class="md-tabs__link">
+        Crypto
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a los retos capture the flag (CTF)" class="md-nav__button md-logo" aria-label="Introducción a los retos capture the flag (CTF)" data-md-component="logo">
+      
+  <img src="../../images/logo.jpg" alt="logo">
+
+    </a>
+    Introducción a los retos capture the flag (CTF)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Redes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Redes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redes/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redes/tools/" class="md-nav__link">
+        Herramientas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redes/retos/" class="md-nav__link">
+        Retos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/tools/" class="md-nav__link">
+        Herramientas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Forense
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forense" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Forense
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../forense/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../forense/tools/" class="md-nav__link">
+        Herramientas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../forense/retos/" class="md-nav__link">
+        Retos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Stego
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stego" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stego
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Herramientas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Retos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Retos
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-1" class="md-nav__link">
+    Challenge 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Challenge 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2" class="md-nav__link">
+    Challenge 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3" class="md-nav__link">
+    Challenge 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-propuesta" class="md-nav__link">
+    Solución propuesta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-comandos-para-impacientes" class="md-nav__link">
+    Resumen de comandos para impacientes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Crypto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Crypto" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Crypto
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crypto/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crypto/tools/" class="md-nav__link">
+        Herramientas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../crypto/retos/" class="md-nav__link">
+        Retos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-1" class="md-nav__link">
+    Challenge 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Challenge 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2" class="md-nav__link">
+    Challenge 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3" class="md-nav__link">
+    Challenge 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-propuesta" class="md-nav__link">
+    Solución propuesta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-comandos-para-impacientes" class="md-nav__link">
+    Resumen de comandos para impacientes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="desafios-de-esteganografia">Desafíos de Esteganografía</h1>
+<h2 id="challenge-1">Challenge 1</h2>
+<p>En este primer reto nos da una imagen y debemos de conseguir la flag a través de la imagen proporcionada. Lo primero que se debe comprobar siempre es que la imagen <strong>no haya sido modificada</strong> anteriormente. Para ello vamos a acceder a la siguiente página: http://fotoforensics.com/</p>
+<p><img alt="" src="../../images/stego/fotoforensics.png" /></p>
+<p>Subimos la imagen proporcionada y encontramos lo siguiente:</p>
+<p><img alt="" src="../../images/stego/modificacion.png" /></p>
+<p>Observamos que en esa parte ha sido modificada, si abrimos la imagen y hacemos Zoom en esa zona, podemos encontrar lo siguiente:</p>
+<p><img alt="" src="../../images/stego/PASSTOTORO.png" /></p>
+<p><strong>PASS=TOTORO</strong>, por tanto ya tenemos la flag del desafío: <strong>flag{TOTORO}</strong></p>
+<h3 id="challenge-2">Challenge 2</h3>
+<p>En el segundo reto también nos proporciona una imgen, por tanto vamos a realizar el mismo proceso que el anterior.</p>
+<p><img alt="" src="../../images/stego/sinexito.png" /></p>
+<p>Sin embargo, no ha habido éxito en este caso. El siguiente paso que se suele usar es tirar del comando <strong>strings</strong> el cual nos proporciona cadenas legibles de una imagen. Si hacemos uso de strings, observamos lo siguiente:</p>
+<p><img alt="" src="../../images/stego/2retoPASS.png" /></p>
+<p>Tendríamos la flag de este segundo reto: <strong>flag{HAHAHA}</strong></p>
+<h3 id="challenge-3">Challenge 3</h3>
+<h2 id="enunciado">Enunciado</h2>
+<p>El siguiente reto nos proporciona <a href="../../images/stego/photo.jpg">esta</a> imagen, pero sabemos que hay algo detrás de ella y necesitamos encontrarlo.</p>
+<p><img alt="" src="../../images/stego/photo.jpg" /></p>
+<h2 id="solucion-propuesta">Solución propuesta</h2>
+<ol>
+<li>Descargamos la imagen <a href="../../images/stego/photo.jpg">photo.jpg</a> proporcionada en la interfaz web.</li>
+<li>Como siempre, verificamos que se trata de una imagen JPG, con la herramienta
+<code>file</code> o la herramienta <code>exiftool</code>:</li>
+</ol>
+<pre><code class="language-bash">$ file photo.jpg
+photo.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96,
+segment length 16, Exif Standard: [TIFF image data, big-endian, direntries=2],
+progressive, precision 8, 1920x1280, components 3
+</code></pre>
+<p>Aparentemente, el fichero es lo que parece, una imagen JPEG. Pasamos a analizar
+la imagen con alguna herramienta online para determinar si esconde algo que no
+se ve a simple vista. Alguna de estas herramientas son:</p>
+<ul>
+<li><a href="1">29a.ch Photo Forensic</a></li>
+<li><a href="2">imageforensic.org</a></li>
+<li>
+<p><a href="3">fotoforensic.com</a></p>
+</li>
+<li>
+<p>Utilizando <a href="3">fotoforensic.com</a> no vemos nada extraño en el
+<em>Error Level Analysis (ELA)</em> que nos muestre una posible modificación de la
+imagen.</p>
+</li>
+</ul>
+<p><img alt="" src="../../images/stego/fotoforensic.png" /></p>
+<p>Sin embargo, si utilizamos la herramienta <code>strings</code> para extraer el
+el contenido ASCII del fichero binario <a href="../../images/stego/photo.jpg">photo.jpg</a>, obtenemos
+algo muy interesante:</p>
+<pre><code class="language-bash">$ strings data/photo.jpg | tee tmp/step0.txt
+JFIF
+Exif
+http://ns.adobe.com/xap/1.0/
+&lt;?xpacket begin='
+' id='W5M0MpCehiHzreSzNTczkc9d'?&gt;
+
+...
+...
+
+=dSP57
+&gt;3TO0
+ad`w
+&quot;https://www.dropbox.com/s/io1kaqznal2c10y/corrupted.zip?dl=0&quot; 
+</code></pre>
+<ol>
+<li>Vemos que la última línea obtenida del comando es un enlace a dropbox. Si
+descargamos el fichero de de Dropbox, mediante <code>wget</code> o copiando y pegando
+el enlace en el navegador e intentamos extraerlo con el comando <code>unzip</code> veremos
+que este fichero está protegido con contraseña. </li>
+</ol>
+<pre><code class="language-bash">$ wget $(tail -1 tmp/step0.txt | sed 's/\&quot;//g') -O tmp/step1.zip
+
+...
+...
+
+$ unzip tmp/step1.zip 
+Archive:  tmp/step1.zip
+[tmp/step1.zip] FOR0x.png password: 
+</code></pre>
+<ol>
+<li>Como vimos en el taller, podemos usar la herramienta <code>john</code> para obtener
+la contraseña del ZIP, pero antes debemos transformar este fichero ZIP en un
+formato legible por dicha herramienta. Para ello usamos la herramienta
+<code>zip2john</code>, que no está incluida en Kali Linux por defecto pero puede ser
+instalada mediate la orden <code>sudo apt install zip2john</code>:</li>
+</ol>
+<pre><code class="language-bash">$ zip2john tmp/step1.zip &gt; tmp/step2.zip.txt 
+</code></pre>
+<ol>
+<li>Ahora si, estamos en condiciones para obtener la contraseña con <code>john</code>:</li>
+</ol>
+<pre><code class="language-bash">$ john tmp/step2.zip.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 2 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst, rules:Wordlist
+Proceeding with incremental:ASCII
+</code></pre>
+<ol>
+<li>Si dejamos que <code>john</code> actúe, veremos que se demora muchísimo, por lo que
+podemos intentar realizar un ataque de diccionario en lugar de un ataque de
+fuerza bruta puro. Para ello, cancelamos la ejecución actual, pulsando
+<code>Ctrl+C</code> y utilizamos <code>john</code> con algún diccionario. </li>
+</ol>
+<p>Podemos usar el diccionario rockyou.txt, con las contraseñas más usadas en el mundo, el cual se encuentra alojado en <code>/usr/share/wordlist/rockyou.txt.gz</code>
+en Kali Linux (Puede descargarse de <a href="4">github</a> si no está disponible en la
+distribución utilizada) Este fichero está comprimido en formado GZIP, por lo
+que para usar este diccionario en <code>john</code>, tenemos que descomprimirlo primero,
+utilizando la instrucción <code>gzip</code>:</p>
+<pre><code class="language-bash">$ gzip -cd /usr/share/wordlists/rockyou.txt.gz | john --stdin step2.zip.txt
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 2 OpenMP threads
+Press Ctrl-C to abort, or send SIGUSR1 to john process for status
+pumpkinpie       (step1.zip/FOR0x.png)
+1g 0:00:00:00  33.33g/s 682666p/s 682666c/s 682666C/s christal..michelle4
+Use the &quot;--show&quot; option to display all of the cracked passwords reliably
+Session completed
+</code></pre>
+<ol>
+<li>Ya tenemos la contraseña del fichero zip (<code>pumpkinpie</code>), así que pasamos a
+descomprimirlo:</li>
+</ol>
+<pre><code class="language-bahs">$ unzip -P &quot;pumpkinpie&quot; tmp/step1.zip -d tmp/    
+Archive:  tmp/step1.zip
+  inflating: tmp/FOR0x.png
+</code></pre>
+<ol>
+<li>Al descomprimir el ZIP, aparentemente hemos obtenido una imagen PNG, pero
+si volvemos a usar la herramienta <code>file</code>, vemos que no lo es:</li>
+</ol>
+<pre><code class="language-bash">$ file tmp/FOR0x.png
+tmp/FOR0x.png: data
+</code></pre>
+<pre><code>El comando `file` nos indica que es un fichero binario `data`. Utilizando de
+</code></pre>
+<p>nuevo la herramienta <code>strings</code>, observamos que la segunda línea devuelta por
+el comando es <code>jfif</code>. </p>
+<pre><code class="language-bash">$ strings tmp/FOR0x.png
+..xx
+jfif
+bExif
+
+...
+...
+
+s_$`
+&amp;[^b'
+;wV;
+</code></pre>
+<pre><code>Si entramos en [esta](5) página de wikipedia y buscamos `jfif`, veremos que
+</code></pre>
+<p>se trata de la cabecera de una imagen JPEG, pero corrupta, pues la cabecera
+no se corresponde completamente.</p>
+<p><img alt="" src="../../images/stego/jpeg_wikipedia.png" /></p>
+<ol>
+<li>Podemos comprobar de forma más exacta que la cabecera del fichero JPEG
+está corrupta utilizando un visor hexadecimal como <code>hexdump</code> y filtrando la 
+primera línea:</li>
+</ol>
+<pre><code class="language-bash">$ hexdump -C tmp/FOR0x.png | head -1
+00000000  2e 2e 78 78 00 10 6a 66  69 66 00 01 38 35 2e 00  |..xx..jfif..85..|
+</code></pre>
+<p>Observamos que los 4 primeros bytes no se corresponden con la cabecera
+estándar de un fichero JPEG. Para recuperar este fichero, tendremos que
+restaurar la cabecera, utilizando un editor hexadecimal como <code>hexedit</code>
+(no está instalado por defecto en Kali Linux, se puede instalar con el comando
+<code>sudo apt install hexedit</code>:</p>
+<pre><code class="language-bash">$ cp tmp/FOR0x.png solution.jpeg
+$ hexedit solution.jpeg
+</code></pre>
+<p>Esto nos abrirá un editor interactivo en el que podremos editar los 4 primeros
+bytes, como se ve en la siguiente imagen:</p>
+<p><img alt="" src="../../images/stego/hexedit.png" /></p>
+<p>Una vez corregidos los cuatro primeros bytes, plusamos <code>Ctrl+x</code> y respondemos
+<code>y</code> para guardar los cambios.</p>
+<ol>
+<li>Una vez editado el fichero, solo tenemos que abrirlo con nuetro visor de
+imágenes favorito y veremos la solición al <em>challenge</em> en la esquina inferior
+derecha:</li>
+</ol>
+<pre><code class="language-bash">$ feh solution.jpeg
+</code></pre>
+<p><img alt="" src="../../images/stego/solution.png" /></p>
+<h2 id="resumen-de-comandos-para-impacientes">Resumen de comandos para impacientes</h2>
+<ol>
+<li><code>strings data/photo.jpg | tee tmp/step0.txt</code></li>
+<li><code>wget $(tail -1 tmp/step0.txt | sed 's/\"//g') -O tmp/step1.zip</code></li>
+<li><code>zip2john tmp/step1.zip &gt; tmp/step2.zip.txt</code></li>
+<li><code>gzip -cd /usr/share/wordlist/rockyou.txt.gz | john --stdin tmp/step2.zip.txt</code></li>
+<li><code>unzip -P "pumpkinpie" tmp/step1.zip -d tmp/</code></li>
+<li><code>cp tmp/FOR0x.png solution.jpeg</code></li>
+<li><code>hexedit solution.jpeg</code></li>
+<li>Cambiamos <code>2e 2e 78 78 00 10</code> por <code>ff d8 ff e0 00 10</code>.</li>
+<li>Guardamos el fichero con <code>Ctrl-x</code> y pulsamos <code>y</code>.</li>
+<li>Abrimos el fichero <code>solution.jpeg</code> con un visor de imágenes.</li>
+</ol>
+<p>Documentado este último reto por Rafael Savariego Fernández : <a href="https://github.com/p52safer">Rafael</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="../tools/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Herramientas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Herramientas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../crypto/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Inicio" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Inicio
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tracking"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
